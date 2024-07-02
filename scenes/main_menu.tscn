@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnwmvgedoc2eo"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_sqlbp"]
+
+[sub_resource type="SystemFont" id="SystemFont_w6nqb"]
+font_names = PackedStringArray("Impact")
+font_weight = 900
+oversampling = 6.3
+
+[sub_resource type="LabelSettings" id="LabelSettings_lpuii"]
+font = SubResource("SystemFont_w6nqb")
+font_size = 42
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_4ahqh"]
+font_names = PackedStringArray("Impact")
+oversampling = 10.0
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sqlbp")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -149.5
+offset_right = 180.0
+offset_bottom = 149.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="Background/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "2D PIXEL PLATFORMER"
+label_settings = SubResource("LabelSettings_lpuii")
+
+[node name="PlayButton" type="Button" parent="Background/VBoxContainer"]
+custom_minimum_size = Vector2(165, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("SystemFont_4ahqh")
+theme_override_font_sizes/font_size = 24
+text = "Play Game"
+
+[node name="FullScreenutton" type="Button" parent="Background/VBoxContainer"]
+custom_minimum_size = Vector2(165, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("SystemFont_4ahqh")
+theme_override_font_sizes/font_size = 24
+text = "Fullscreen"
+
+[node name="QuitButton" type="Button" parent="Background/VBoxContainer"]
+custom_minimum_size = Vector2(165, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("SystemFont_4ahqh")
+theme_override_font_sizes/font_size = 24
+text = "Quit"
+
+[connection signal="pressed" from="Background/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Background/VBoxContainer/FullScreenutton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Background/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

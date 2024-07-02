@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhqk848kkw3nm"]
+
+[ext_resource type="Script" path="res://scenes/level_additions/hud.gd" id="1_lpfp7"]
+
+[sub_resource type="SystemFont" id="SystemFont_68r8i"]
+font_names = PackedStringArray("MS UI Gothic")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_qv25l"]
+font_size = 11
+
+[sub_resource type="SystemFont" id="SystemFont_atgyb"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_w70f7"]
+font = SubResource("SystemFont_atgyb")
+font_size = 60
+
+[sub_resource type="SystemFont" id="SystemFont_c4cyy"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_ifd23"]
+font = SubResource("SystemFont_c4cyy")
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_lpfp7")
+
+[node name="Currency_Counter" type="Label" parent="."]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(2.1822, 1.26269)
+theme_override_fonts/font = SubResource("SystemFont_68r8i")
+text = "Coins"
+label_settings = SubResource("LabelSettings_qv25l")
+
+[node name="Deathscreen" type="Label" parent="."]
+modulate = Color(0.945098, 0, 0, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -95.0
+offset_right = 157.0
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU DIED!
+"
+label_settings = SubResource("LabelSettings_w70f7")
+
+[node name="FAIL" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.5
+offset_top = -30.0
+offset_right = 83.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "press F to accept your FAIL"
+label_settings = SubResource("LabelSettings_ifd23")
