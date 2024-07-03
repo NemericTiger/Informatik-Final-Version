@@ -23,8 +23,3 @@ func _on_body_entered(body):
 	
 		tween.tween_callback(queue_free)
 
-
-
-
-
-	
