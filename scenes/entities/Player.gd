@@ -71,10 +71,12 @@ func _physics_process(delta):
 			$AnimatedSprite2D.play("run")
 			$AnimatedSprite2D.flip_h = true
 			
-		elif velocity.x > 2 and GlobalVar.player_attack == false:
+		if velocity.x > 2 and GlobalVar.player_attack == false:
 			$AnimatedSprite2D.play("run")
 			$AnimatedSprite2D.flip_h = false
-			
+	
+
+	
 	elif GlobalVar.player_attack == false:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		$AnimatedSprite2D.play("idle")

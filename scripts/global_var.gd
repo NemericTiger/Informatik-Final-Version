@@ -7,4 +7,4 @@ var level_start_pos : Level = null
 
 var player_attack = false
 var alive = true
-var enemy_alive = 2
+var enemy_alive = 3

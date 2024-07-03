@@ -633,10 +633,13 @@ shadow_filter_smooth = 0.5
 color = Color(0.796078, 0.705882, 0.647059, 1)
 
 [node name="enemy" parent="." instance=ExtResource("6_usrn2")]
-position = Vector2(681, 304)
+position = Vector2(2422, 305)
 
 [node name="enemy2" parent="." instance=ExtResource("6_usrn2")]
-position = Vector2(467, 305)
+position = Vector2(2549, 306)
+
+[node name="enemy3" parent="." instance=ExtResource("6_usrn2")]
+position = Vector2(2726, 305)
 
 [node name="Door" parent="." instance=ExtResource("6_jlopn")]
 position = Vector2(2922, 290)
