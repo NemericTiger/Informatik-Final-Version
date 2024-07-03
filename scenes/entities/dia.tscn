@@ -110,12 +110,11 @@ script = ExtResource("1_7rjxa")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_3asto")
-animation = &"collect"
+animation = &"idle"
 autoplay = "idle"
-frame = 1
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_hkx03")
 
 [node name="cooldown" type="Timer" parent="."]

@@ -102,6 +102,14 @@ func player():
 	pass
 
 
+
+func _on_regen_timer_timeout():
+	if health < 100:
+		health = health + 15
+		if health > 100:
+			health = 100
+
+
 func update_health():
 	var healthbar = $healthbar
 	healthbar.value = health
@@ -118,7 +126,7 @@ func _on_player_hitbox_body_exited(body):
 
 func enemy_attack():
 	if enemy_in_range and enemy_cooldown:
-		health = health - 8
+		health = health - 15
 		enemy_cooldown = false
 		$enemy_cooldown.start()
 		print("player_health " + str(health))

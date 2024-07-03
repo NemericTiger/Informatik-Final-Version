@@ -31,7 +31,6 @@ offset_right = 40.0
 offset_bottom = 23.0
 scale = Vector2(2.1822, 1.26269)
 theme_override_fonts/font = SubResource("SystemFont_68r8i")
-text = "Coins"
 label_settings = SubResource("LabelSettings_qv25l")
 
 [node name="Deathscreen" type="Label" parent="."]
