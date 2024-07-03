@@ -386,6 +386,7 @@ script = ExtResource("1_o6vxi")
 scale = Vector2(0.95, 0.95)
 limit_left = 0
 limit_top = 0
+limit_right = 5982
 limit_bottom = 352
 limit_smoothed = true
 
