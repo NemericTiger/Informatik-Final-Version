@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://dg05s28wdlycq"]
 
-[ext_resource type="Script" path="res://door_out.gd" id="1_rqd37"]
+[ext_resource type="Script" path="res://scenes/level_additions/door_out.gd" id="1_rqd37"]
 [ext_resource type="Texture2D" uid="uid://c3awpihvj3tig" path="res://assets/Kings and Pigs/Sprites/11-Door/Closiong (46x56).png" id="2_kv71d"]
 [ext_resource type="Texture2D" uid="uid://drpvlxx5tp1uj" path="res://assets/Kings and Pigs/Sprites/11-Door/Idle.png" id="3_ossin"]
 [ext_resource type="Texture2D" uid="uid://cwrmb7c4xud3g" path="res://assets/Kings and Pigs/Sprites/11-Door/Opening (46x56).png" id="4_qxw64"]

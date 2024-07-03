@@ -12,12 +12,19 @@ var can_take_damage = true
 func _physics_process(delta):
 
 	if not is_on_floor():
-		velocity.y += gravity * delta - 4
+		velocity.y = 100 #+= gravity * delta * 20
+	
 
 	if chase:
-		$AnimatedSprite2D.play("aggressive")
-		position += (player.position - position).normalized() * speed * delta
+		#$AnimatedSprite2D.play("aggressive")
+		velocity += (player.position - position).normalized() * speed * delta
 		move_and_slide() 
+		if velocity.x < 0:
+			$AnimatedSprite2D.play("aggressive")
+			$AnimatedSprite2D.flip_h = false
+		elif velocity.x > 0:
+			$AnimatedSprite2D.play("aggressive")
+			$AnimatedSprite2D.flip_h = true
 
 	if health <= 0:
 		GlobalVar.enemy_alive = GlobalVar.enemy_alive - 1

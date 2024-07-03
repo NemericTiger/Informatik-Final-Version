@@ -11,5 +11,5 @@ func _input(_event):
 		get_tree().change_scene_to_file("res://scenes/levels/lvl_01.tscn")
 		GlobalVar.currency_01 = 0
 		GlobalVar.alive = true
-		
+		GlobalVar.enemy_alive = 3
 

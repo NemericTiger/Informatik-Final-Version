@@ -17,7 +17,7 @@ var can_control : bool = true
 #Battle system variablen
 var enemy_in_range = false
 var enemy_cooldown = true
-var health = 300 
+var health = 100
 var attack_ip = false
 
 
@@ -116,7 +116,7 @@ func _on_player_hitbox_body_exited(body):
 
 func enemy_attack():
 	if enemy_in_range and enemy_cooldown:
-		health = health - 20
+		health = health - 8
 		enemy_cooldown = false
 		$enemy_cooldown.start()
 		print("player_health " + str(health))
@@ -137,13 +137,15 @@ func player_attack():
 		#print("right")
 		#current_direction = "right"
 	
-	if Input.is_action_just_pressed("attack"):# and is_on_floor()
+	if Input.is_action_just_pressed("attack")and is_on_floor():# and is_on_floor()
 		GlobalVar.player_attack = true
 		attack_ip = true
+		
 		if $AnimatedSprite2D.flip_h == false:
 			$AnimatedSprite2D.flip_h = false
 			$AnimatedSprite2D.play("attack")
 			$player_cooldown.start()
+			
 		if $AnimatedSprite2D.flip_h == true:
 			$AnimatedSprite2D.flip_h = true
 			$AnimatedSprite2D.play("attack")
@@ -164,7 +166,7 @@ func _on_area_2d_area_entered(area):
 		$AnimatedSprite2D.play("door in")
 		area.door_in()
 		
-		await get_tree().create_timer(0.15).timeout
+		await get_tree().create_timer(0.13).timeout
 		can_control = false
 		$AnimatedSprite2D.play("door in")
 		
