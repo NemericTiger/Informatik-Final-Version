@@ -1,5 +1,7 @@
 extends Area2D
 
+#@export var test : int
+
 @onready var anim = $AnimatedSprite2D
 var cooldown = true
 

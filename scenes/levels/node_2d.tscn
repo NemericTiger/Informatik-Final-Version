@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1grny3gg2mc8"]
+
+[ext_resource type="Texture2D" uid="uid://dqlbyqpxboanp" path="res://assets/work-in-progress-16914.jpeg" id="1_pxneh"]
+
+[node name="lvl_02" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 626.0
+offset_bottom = 352.0
+texture = ExtResource("1_pxneh")
+expand_mode = 2

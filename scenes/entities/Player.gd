@@ -195,3 +195,22 @@ func _on_animated_sprite_2d_animation_finished():
 	elif $AnimatedSprite2D.animation == ("attack"):
 		GlobalVar.player_attack = false
 
+
+
+func _on_tür_gedöns_area_entered(area):
+	if area.has_method("door2"):
+		$AnimatedSprite2D.play("door in")
+		area.door_in2()
+		
+		await get_tree().create_timer(0.13).timeout
+		can_control = false
+		$AnimatedSprite2D.play("door in")
+
+
+
+
+
+
+
+
+
